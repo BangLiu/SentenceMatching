@@ -1,0 +1,51 @@
+# ::snt Bush claimed victory.
+# ::tok Bush claimed victory .
+# ::alignments 2-3|0.1 1-2|0 0-1|0.0.1+0.0.0.0+0.0.0+0.0 ::annotator JAMR dev v0.3 ::date 2017-09-03T22:47:08.965
+(c / claim-01 
+      :ARG0 (p / person 
+            :name (n / name 
+                  :op1 "Bush") 
+            :wiki "George_W._Bush") 
+      :ARG1 (v / victory))
+
+# ::snt Hillary Clinton participated in the elections.
+# ::tok Hillary Clinton participated in the elections .
+# ::alignments 5-6|0.1 2-3|0 0-2|0.0.1+0.0.0.1+0.0.0.0+0.0.0+0.0 ::annotator JAMR dev v0.3 ::date 2017-09-03T22:47:09.025
+(p / participate-01 
+      :ARG0 (p2 / person 
+            :name (n / name 
+                  :op1 "Hillary" 
+                  :op2 "Clinton") 
+            :wiki "Hillary_Rodham_Clinton") 
+      :ARG1 (e / elect-01))
+
+# ::snt Mickey Mouse won the war.
+# ::tok Mickey Mouse won the war .
+# ::alignments 4-5|0.1 2-3|0 0-2|0.0.1+0.0.0.1+0.0.0.0+0.0.0+0.0 ::annotator JAMR dev v0.3 ::date 2017-09-03T22:47:09.065
+(w2 / win-01 
+      :ARG0 (p / person 
+            :name (n / name 
+                  :op1 "Mickey" 
+                  :op2 "Mouse") 
+            :wiki "Mickey_Mouse") 
+      :ARG2 (w / war))
+
+# ::snt The army refused to participate.
+# ::tok The army refused to participate .
+# ::alignments 4-5|0.1 2-3|0 1-2|0.0 ::annotator JAMR dev v0.3 ::date 2017-09-03T22:47:09.095
+(r / refuse-01 
+      :ARG0 (a / army) 
+      :ARG1 (p / participate-01 
+            :ARG0 a))
+
+# ::snt I went to school yesterday and met my tutor.
+# ::tok I went to school yesterday and met my tutor .
+# ::alignments 8-9|0 6-7|0.1 5-6|0.1.0 4-5|0.0 3-4|0.1.0.0.1 1-2|0.1.0.0 0-1|0.1.0.0.0 ::annotator JAMR dev v0.3 ::date 2017-09-03T22:47:09.315
+(t / tutor-01 
+      :ARG1 (y / yesterday) 
+      :ARG1-of (m / meet-03 
+            :op2-of (a / and 
+                  :op1 (g / go-02 
+                        :ARG0 (i / i) 
+                        :ARG1 (s / school)))))
+

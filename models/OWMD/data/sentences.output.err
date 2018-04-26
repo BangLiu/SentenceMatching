@@ -1,0 +1,200 @@
+ ### Tokenizing input ###
+/Users/bangliu/Documents/Work/TextPairRelation/tools/JAMR/jamr/tools/cdec/corpus/support/utf8-normalize.sh: Cannot find ICU uconv (http://site.icu-project.org/) ... falling back to iconv. Quality may suffer.
+ ### Running NER system ###
+~/Documents/Work/TextPairRelation/tools/JAMR/jamr/tools/IllinoisNerExtended ~/Documents/Work/TextPairRelation/tools/JAMR/jamr
+Adding feature: Forms
+Adding feature: Capitalization
+Adding feature: WordTypeInformation
+Adding feature: Affixes
+Adding feature: PreviousTag1
+Adding feature: PreviousTag2
+Adding feature: PreviousTagPatternLevel1
+Adding feature: PreviousTagPatternLevel2
+Adding feature: PrevTagsForContext
+Adding feature: PredictionsLevel1
+Adding feature: GazetteersFeatures
+Adding feature: BrownClusterPaths
+Loading gazetteers....
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+	loading gazetteer:....ner-ext/KnownLists/cardinalNumber.txt
+	loading gazetteer:....ner-ext/KnownLists/currencyFinal.txt
+	loading gazetteer:....ner-ext/KnownLists/known_corporations.lst
+	loading gazetteer:....ner-ext/KnownLists/known_country.lst
+	loading gazetteer:....ner-ext/KnownLists/known_jobs.lst
+	loading gazetteer:....ner-ext/KnownLists/known_name.lst
+	loading gazetteer:....ner-ext/KnownLists/known_names.big.lst
+	loading gazetteer:....ner-ext/KnownLists/known_nationalities.lst
+	loading gazetteer:....ner-ext/KnownLists/known_place.lst
+	loading gazetteer:....ner-ext/KnownLists/known_state.lst
+	loading gazetteer:....ner-ext/KnownLists/known_title.lst
+	loading gazetteer:....ner-ext/KnownLists/KnownNationalities.txt
+	loading gazetteer:....ner-ext/KnownLists/measurments.txt
+	loading gazetteer:....ner-ext/KnownLists/Occupations.txt
+	loading gazetteer:....ner-ext/KnownLists/ordinalNumber.txt
+	loading gazetteer:....ner-ext/KnownLists/temporal_words.txt
+	loading gazetteer:....ner-ext/KnownLists/VincentNgPeopleTitles.txt
+	loading gazetteer:....ner-ext/KnownLists/WikiArtWork.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiArtWorkRedirects.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiCompetitionsBattlesEvents.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiCompetitionsBattlesEventsRedirects.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiFilms.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiFilmsRedirects.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiLocations.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiLocationsRedirects.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiManMadeObjectNames.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiManMadeObjectNamesRedirects.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiOrganizations.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiOrganizationsRedirects.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiPeople.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiPeopleRedirects.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiSongs.lst
+	loading gazetteer:....ner-ext/KnownLists/WikiSongsRedirects.lst
+found 33 gazetteers
+1288301 words added
+95262 words added
+85963 words added
+
+Working parameters are:
+	inferenceMethod=GREEDY
+	beamSize=5
+	thresholdPrediction=false
+	predictionConfidenceThreshold=-1.0
+	labelTypes
+		PER		ORG		LOC		MISC
+	logging=false
+	debuggingLogPath=null
+	forceNewSentenceOnLineBreaks=true
+	keepOriginalFileTokenizationAndSentenceSplitting=false
+	taggingScheme=BILOU
+	tokenizationScheme=DualTokenizationScheme
+	pathToModelFile=data/Models/CoNLL/finalSystemBILOU.model
+Brown clusters resource: 
+	-Path: brown-clusters/brown-english-wikitext.case-intact.txt-c1000-freq10-v3.txt
+	-WordThres=5
+	-IsLowercased=false
+Brown clusters resource: 
+	-Path: brown-clusters/brownBllipClusters
+	-WordThres=5
+	-IsLowercased=false
+Brown clusters resource: 
+	-Path: brown-clusters/brown-rcv1.clean.tokenized-CoNLL03.txt-c1000-freq1.txt
+	-WordThres=5
+	-IsLowercased=false
+
+Tagging file: /tmp/jamr-9925.snt.tmp
+Reading model file : data/Models/CoNLL/finalSystemBILOU.model.level1
+Reading model file : data/Models/CoNLL/finalSystemBILOU.model.level2
+Extracting features for level 2 inference
+Done - Extracting features for level 2 inference
+~/Documents/Work/TextPairRelation/tools/JAMR/jamr
+ ### Running dependency parser ###
+Adding annotator tokenize
+TokenizerAnnotator: No tokenizer type provided. Defaulting to PTBTokenizer.
+Adding annotator ssplit
+edu.stanford.nlp.pipeline.AnnotatorImplementations:
+Adding annotator parse
+Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishRNN.ser.gz ...done [2.1 sec].
+ ### Running JAMR ###
+Stage1 features = List(bias, corpusIndicator, length, corpusLength, conceptGivenPhrase, count, phraseGivenConcept, phraseConceptPair, phrase, firstMatch, numberIndicator, sentenceMatch, andList, pos, posEvent, phraseConceptPairPOS, badConcept)
+features = List(rootConcept, rootDependencyPathv1, bias, typeBias, self, fragHead, edgeCount, distance, logDistance, posPathv3, dependencyPathv4, conceptBigram, dependencyPathv5)
+connected = true
+features = List(rootConcept, rootDependencyPathv1, bias, typeBias, self, fragHead, edgeCount, distance, logDistance, posPathv3, dependencyPathv4, conceptBigram, dependencyPathv5)
+connected = true
+Reading weights
+done
+Sentence: Bush claimed victory.
+
+NER Entity: (person :name (name :op "Bush"))
+NER Entity: (person :name (name :op "Bush"))
+Spans:
+Span 0-1:  Bush => (person :name (name :op "Bush") :wiki "George_W._Bush")
+Span 1-2:  claimed => claim-01
+Span 2-3:  victory => victory
+
+************* WARNING: Cannot find label = :wiki in the labelset ***************
+Lagrangian relaxation converged after 1 iterations. Delta = 0.0
+AMR:
+(c / claim-01, ARG0, p / person)
+(c / claim-01, ARG1, v / victory)
+(n / name, op, "Bush")
+(p / person, name, n / name)
+(p / person, wiki, "George_W._Bush")
+
+Decoded in 304,037 microseconds
+Sentence: Hillary Clinton participated in the elections.
+
+NER Entity: (person :name (name :op "Hillary" :op "Clinton"))
+NER Entity: (person :name (name :op "Hillary" :op "Clinton"))
+Spans:
+Span 5-6:  elections => elect-01
+Span 0-2:  Hillary Clinton => (person :name (name :op "Clinton" :op "Hillary") :wiki "Hillary_Rodham_Clinton")
+Span 2-3:  participated => participate-01
+
+************* WARNING: Cannot find label = :wiki in the labelset ***************
+Lagrangian relaxation converged after 1 iterations. Delta = 0.0
+AMR:
+(n / name, op, "Clinton")
+(n / name, op, "Hillary")
+(p / participate-01, ARG0, p2 / person)
+(p / participate-01, ARG1, e / elect-01)
+(p2 / person, name, n / name)
+(p2 / person, wiki, "Hillary_Rodham_Clinton")
+
+Decoded in 56,886 microseconds
+Sentence: Mickey Mouse won the war.
+
+NER Entity: (person :name (name :op "Mickey" :op "Mouse"))
+NER Entity: (person :name (name :op "Mickey" :op "Mouse"))
+Spans:
+Span 0-2:  Mickey Mouse => (person :name (name :op "Mickey" :op "Mouse") :wiki "Mickey_Mouse")
+Span 4-5:  war => war
+Span 2-3:  won => win-01
+
+************* WARNING: Cannot find label = :wiki in the labelset ***************
+Lagrangian relaxation converged after 1 iterations. Delta = 0.0
+AMR:
+(n / name, op, "Mickey")
+(n / name, op, "Mouse")
+(p / person, name, n / name)
+(p / person, wiki, "Mickey_Mouse")
+(w2 / win-01, ARG0, p / person)
+(w2 / win-01, ARG2, w / war)
+
+Decoded in 40,180 microseconds
+Sentence: The army refused to participate.
+
+Spans:
+Span 1-2:  army => army
+Span 4-5:  participate => participate-01
+Span 2-3:  refused => refuse-01
+
+Lagrangian relaxation converged after 1 iterations. Delta = 0.0
+AMR:
+(p / participate-01, ARG0, a / army)
+(r / refuse-01, ARG0, a / army)
+(r / refuse-01, ARG1, p / participate-01)
+
+Decoded in 30,342 microseconds
+Sentence: I went to school yesterday and met my tutor.
+
+Spans:
+Span 5-6:  and => and
+Span 0-1:  I => i
+Span 6-7:  met => meet-03
+Span 3-4:  school => school
+Span 8-9:  tutor => tutor-01
+Span 1-2:  went => go-02
+Span 4-5:  yesterday => yesterday
+
+Lagrangian relaxation converged after 25 iterations. Delta = 0.0
+AMR:
+(a / and, op, g / go-02)
+(a / and, op, m / meet-03)
+(g / go-02, ARG0, i / i)
+(g / go-02, ARG1, s / school)
+(m / meet-03, ARG1, t / tutor-01)
+(t / tutor-01, ARG1, y / yesterday)
+
+Decoded in 219,284 microseconds
